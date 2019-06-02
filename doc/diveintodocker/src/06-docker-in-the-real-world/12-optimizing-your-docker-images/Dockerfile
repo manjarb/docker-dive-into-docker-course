@@ -6,6 +6,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 
 RUN apk add --no-cache --virtual .build-deps \
+    postgresql-dev \
     && pip install -r requirements.txt \
     && find /usr/local \
         \( -type d -a -name test -o -name tests \) \

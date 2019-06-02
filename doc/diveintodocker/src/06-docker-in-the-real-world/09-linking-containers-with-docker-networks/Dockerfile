@@ -1,5 +1,7 @@
 FROM python:2.7-alpine
 
+RUN apk update && apk add iputils
+
 RUN mkdir /app
 WORKDIR /app
 
